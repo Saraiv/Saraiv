@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🎓 I have a degree in a Senior Professional Mobile Applications Technician.
+- 🎓 I have a degree in a Superior Professional Technician in Mobile Applications.
 - 🎓 I’m currently studying Digital Game Development Engineering on IPCA.
 - 📫 How to reach me: 
   - [Twitter](https://twitter.com/saraivinha98)
