@@ -1,0 +1,51 @@
+general {
+    	colors = true
+	color_good = "#a3be8c"
+	color_degraded = "#ebcb8b"
+	color_bad = "#bf616a"
+	interval = 1
+	separator = " | "
+}
+
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "volume master"
+order += "tztime lisbon"
+
+
+disk "/" {
+	format = "DISK: %percentage_used"
+}
+
+cpu_usage {
+	format = "CPU: %usage"
+}
+
+memory {
+	memory_used_method = classical
+	format = "Memory: %used/%total"
+}
+
+wireless wlan0 {
+	format_up = "WIFI: (%quality)"
+	format_down = "NO WIFI"
+}
+
+ethernet eth0 {
+	format_up = "ETHERNET: (%speed)"
+	format_down = ""
+}
+
+tztime lisbon {
+	format = "%Y-%m-%d %H:%M"
+	timezone = "Europe/Lisbon"
+}
+
+volume master {
+	format = "VOLUME: %volume"
+	format_muted = "VOLUME: MUTED"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
