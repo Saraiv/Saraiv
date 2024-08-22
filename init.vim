@@ -31,6 +31,7 @@ Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 " Theme
 Plug 'slugbyte/lackluster.nvim'
+Plug 'blazkowolf/gruber-darker.nvim'
 
 call plug#end()
 
@@ -54,9 +55,18 @@ set splitbelow splitright
 " NERDTree
 " map <leader>fe :NERDTree
 map <leader>fe :NERDTreeToggle <enter>
+map <leader>ff :NERDTreeFocus <enter>
+" Autostart NERDTree
+autocmd VimEnter * NERDTree
 
 " Save file
 map <C-s> :w <enter>
+
+" Move around splits
+nnoremap <Leader><Left> <C-w>h
+nnoremap <Leader><Right> <C-w>l
+nnoremap <Leader><Up> <C-w>k
+nnoremap <Leader><Down> <C-w>j
 
 " Lua
 lua <<EOF
@@ -69,4 +79,4 @@ EOF
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 
 " Colorscheme
-color lackluster
+color gruber-darker
